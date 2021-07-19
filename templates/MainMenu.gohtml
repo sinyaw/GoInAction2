@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Stuff/Style.css">
+    {{template "HeadTitle" .PageName}}
+</head>
+
+<body>
+    {{template "BodyTitle" .}}
+    <br>
+
+    <table style="height: auto;">
+        <tr>
+            <td style="width: 50%;">
+                <div class='mdisplay' onclick="location.href='/bookcar'"
+                    style="height: 450px; border-color: DodgerBlue; border-style: solid; border-width: 1px;">
+                    <img style="width: 100%; height: 93% ;object-fit: cover; object-position: left;"
+                        src='/Pictures/CarRental.png' alt="CarBooking"></img>
+                    <h2 style="text-align: center; height: 7%;">Rent A Car</h2>
+                </div>
+            </td>
+            <td style="width: 50%; vertical-align: top;">
+                <div class='mdisplay' onclick="location.href='/viewbooking'"
+                    style="height: 450px; border-color: DodgerBlue; border-style: solid; border-width: 1px;">
+                    <img style="width: 100%; height: 93% ;object-fit: cover; object-position: 45% 50%;"
+                        src='/Pictures/CarBooking.jpg' alt="CarBooking"></img>
+                    <h2 style="text-align: center; height: 7%;">Current Booking</h2>
+                </div>
+            </td>
+        </tr>
+    </table>
+    {{template "Footer"}}
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{{define "CarModel"}}
+
+
+<table style='width:80%'>
+    {{if .UserName}}   
+    <h2> test for Loged in User </h2>
+    <table style="width:100%">
+    <tr>
+        <td style="width:50%"><h3>Hello, {{.UserName}} !</h3></td>
+        <td style="text-align:left;"><h5><a  href="/logout">Log Out</a></h5>
+    </tr>
+    </table>
+    {{end}}
+{{end}}
+{{/* type user struct {
+	UserName string
+	Password string
+	UserID   string
+} */}}

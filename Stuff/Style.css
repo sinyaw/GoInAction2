@@ -1,0 +1,160 @@
+/* {{define "StyleCSS"}}
+<style> */
+
+body {
+  margin: 0;
+  align-items: center;
+}
+a,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0px;
+
+  /* background-color: tomato;
+        border-color: indigo;
+        border-style: solid;
+        border-width: 0.5px; */
+}
+
+/* standand header every page */
+.MainBar {
+  color: white;
+  background-color: dodgerblue;
+  width: 100%;
+  height: 38px;
+  position: relative;
+}
+
+.MainBar > div {
+  width: fit-content;
+  position: absolute;
+  bottom: 1px;
+}
+
+/* standand footer every page */
+div.footer {
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.footer div > h4 {
+  color: rgb(3, 102, 201);
+}
+.footer table {
+  background-color: dodgerblue;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+}
+
+/* bookcar car picture layout */
+div.display {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  height: fit-content;
+}
+
+.display > div {
+  margin: 5px;
+  border: 1px solid dodgerblue;
+  width: 180px;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+.display > div:hover,
+div.mdisplay:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+div.display img {
+  width: 100%;
+  height: auto;
+}
+
+.displayText {
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* data input page */
+h3.Application,
+h4.Application {
+  width: fit-content;
+  margin: 0% auto;
+  margin-top: 5%;
+}
+div.Application {
+  width: 200pt;
+  margin: 0% auto;
+  margin-top: 20pt;
+  margin-bottom: 2;
+}
+.Application div > input {
+  border-color: dodgerblue;
+  border-block-end-color: dodgerblue;
+  border-inline-end-color: dodgerblue;
+  border-block-start-color: dodgerblue;
+  border-inline-start-color: dodgerblue;
+  border-width: 1.5px;
+  padding: 0;
+  margin-left: 5%;
+  width: 90%;
+}
+input.Application,
+div.Application > input {
+  background-color: white;
+  border-color: dodgerblue;
+  color: dodgerblue;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: 5%;
+}
+
+input.Application:hover,
+div.Application > input:hover {
+  background-color: dodgerblue;
+  border-color: white;
+  color: white;
+  font-weight: bold;
+}
+
+div.ViewBookings {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding-top: 5px;
+}
+
+.ViewBookings table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.ViewBookings td {
+  padding-top: 5px;
+}
+
+.ViewBookings tr:nth-child(even) {
+  background-color: rgb(166, 211, 255);
+}
+
+/* </style>
+{{end}} */

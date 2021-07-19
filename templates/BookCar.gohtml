@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Stuff/Style.css">
+    {{template "HeadTitle" .PageName}}
+</head>
+
+<body>
+    {{template "BodyTitle" .}}
+    <br>
+    <div style="padding: 5px;">
+        <h3 id="title1">Please selete a car model for rent</h3><br>
+    </div>
+    <form method="POST">
+        <div>
+            <div class='display' style='height: fit-content ;width: 100%'>
+                {{range $v := .CarDisplay}}
+                <div class="car" id="{{$v}}" onclick="change('{{$v}}');">
+                    <a target='_blank'></a>
+                    <img class='CarModel' src='/Pictures/{{$v}}.jpg' alt='{{$v}}'>
+                    </a>
+                    <div class='displayText'>{{$v}}</div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+        <div id="divDuration" class="Application"
+            style="padding: 5px; overflow: hidden; width:0; height: 0; margin-top: 18px;">
+            <h3 id="title2">Car Model</h3>
+            <div style="margin-top: 5px; width: 240px; display: inline-block;">
+                <label for='duration'>Start From:</label>
+                <input id="S1" onchange="date()" style="margin-left: 0" type='date' min={{.Today}} id='startdate'
+                    name='startdate' required>
+            </div>
+            <div style="margin-top: 5px; width: 240px; display: inline-block;">
+                <label for='duration'>End To:</label>
+                <input id="S2" style="margin-left: 0" type='date' min={{.Today}} id='enddate' name='enddate' required>
+            </div>
+            <br>
+            <input type="hidden" id="change" name="car" required>
+            <input class="Application" style="margin-left: 0" type="submit">
+        </div>
+    </form>
+
+    <br><br>
+
+    <script>
+        function change(vl) {
+            document.getElementById('title1').innerText = 'Your have selected - "' + vl + '"';
+            document.getElementById('title2').innerText = 'Please select duration for the rental:';
+            document.getElementById('divDuration').style.width = "auto";
+            document.getElementById('divDuration').style.height = "auto";
+            document.getElementById("change").value = vl;
+        }
+        function date() {
+            // var sd = document.getElementById('S1').value;
+            // var ed = document.getElementById('S2').valus;
+            // if (ed > sd) {
+            var x = document.getElementById("S1").value;
+            var y = document.getElementById("S2").value;
+            if (document.getElementById("S2").value < x) {
+                document.getElementById("S2").value = "";
+                document.getElementById("S2").min = x;
+            } else {
+                document.getElementById("S2").min = x;
+            }
+        }
+    </script>
+
+    {{template "Footer"}}
+
+
+</body>
+
+</html>
